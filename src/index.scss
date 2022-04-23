@@ -39,6 +39,10 @@ body {
   .main {
     padding: 40px;
 
+    h1.centered {
+      text-align: center;
+    }
+
     .star {
       background-color: $bgColorFadeout;
       width: 20px;
@@ -83,6 +87,11 @@ body {
       &:hover {
         background-color: $white;
         color: $orange;
+      }
+
+      &:disabled {
+        background-color: $mediumGray;
+        color: $darkBlue;
       }
     }
 

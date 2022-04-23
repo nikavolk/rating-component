@@ -7,7 +7,7 @@ const Rating = () => {
 
   return (
     <div className="main">
-      <img className="star" src={Star} />
+      <img className="star" src={Star} alt="You're a star, baby!" />
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback is
@@ -56,7 +56,7 @@ const Rating = () => {
         />
       </div>
       <Link to="/thankyou" state={{ selected }}>
-        <button>Submit</button>
+        <button disabled={selected === null}>Submit</button>
       </Link>
     </div>
   );
