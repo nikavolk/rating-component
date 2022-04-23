@@ -1,0 +1,68 @@
+body {
+  font: 100% Overpass;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main {
+  padding: 40px;
+}
+
+.card {
+  display: flex;
+  max-width: 410px;
+  height: 400px;
+  background: rgb(35, 42, 50);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 42, 50, 1) 0%,
+    rgba(23, 30, 40, 1) 100%
+  );
+  border-radius: 30px;
+
+  p {
+    color: hsl(217, 12%, 63%);
+    line-break: strict;
+  }
+
+  button {
+    width: 100%;
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    height: 50px;
+    border: 0;
+    border-radius: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .star {
+    background-color: antiquewhite;
+  }
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: hsl(213, 19%, 18%);
+  bottom: 0;
+}
