@@ -2,17 +2,24 @@ import { useLocation } from "react-router-dom";
 import ThankYouIllustration from "../Assets/Images/illustration-thank-you.svg";
 
 const ThankYou = () => {
+  /* initiating useLocation prop to access props passed through Router's <Link> */
   const location = useLocation();
   const { selected } = location.state;
-  console.log(selected);
 
   return (
-    <div>
-      <img src={ThankYouIllustration} />
-      <div className="selected-text">
-        {selected === null
-          ? "You have not selected a rating"
-          : `You selected ${selected} out of 5`}
+    <div className="main">
+      <div className="illustration">
+        <img
+          src={ThankYouIllustration}
+          alt="Thank you for submitting a rating!"
+        />
+      </div>
+      <div className="selected-rating">
+        <p>
+          {selected === null
+            ? "You have not selected a rating"
+            : `You selected ${selected} out of 5`}
+        </p>
       </div>
       <h1>Thank you!</h1>
       <p>

@@ -1,8 +1,20 @@
+$orange: hsla(25, 97%, 53%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$lightGray: hsla(217, 12%, 63%, 1);
+$mediumGray: hsla(216, 12%, 54%, 1);
+$darkBlue: hsla(213, 19%, 18%, 1);
+$veryDarkBlue: hsla(216, 12%, 8%, 1);
+$bgColorFadeout: fade-out(
+  $color: $mediumGray,
+  $amount: 0.85,
+);
+
 body {
   font: 100% Overpass;
-  background-color: hsl(216, 12%, 8%);
-  color: hsl(0, 0%, 100%);
+  background-color: $veryDarkBlue;
+  color: $white;
   margin: 0;
+  font-weight: 400;
 }
 
 .main-container {
@@ -12,14 +24,10 @@ body {
   height: 100vh;
 }
 
-.main {
-  padding: 40px;
-}
-
 .card {
   display: flex;
   max-width: 410px;
-  height: 400px;
+  min-height: max-content;
   background: rgb(35, 42, 50);
   background: linear-gradient(
     180deg,
@@ -28,34 +36,89 @@ body {
   );
   border-radius: 30px;
 
-  p {
-    color: hsl(217, 12%, 63%);
-    line-break: strict;
-  }
+  .main {
+    padding: 40px;
 
-  button {
-    width: 100%;
-    background-color: hsl(25, 97%, 53%);
-    color: hsl(0, 0%, 100%);
-    height: 50px;
-    border: 0;
-    border-radius: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
+    .star {
+      background-color: $bgColorFadeout;
+      width: 20px;
+      padding: 10px;
+      border-radius: 50%;
+    }
 
-  .star {
-    background-color: antiquewhite;
-  }
-}
+    .illustration {
+      text-align: center;
+    }
 
-ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
+    .selected-rating {
+      margin: 30px 0px;
+
+      p {
+        background-color: $darkBlue;
+        color: $orange;
+        padding: 10px;
+        width: max-content;
+        border-radius: 15px;
+        margin: auto;
+      }
+    }
+
+    p {
+      color: $lightGray;
+      margin: 0;
+    }
+
+    button {
+      width: 100%;
+      background-color: $orange;
+      color: $white;
+      height: 50px;
+      border: 0;
+      border-radius: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 0.2em;
+
+      &:hover {
+        background-color: $white;
+        color: $orange;
+      }
+    }
+
+    .ratings {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      input {
+        appearance: none;
+        cursor: pointer;
+        border-radius: 50%;
+        background: $darkBlue;
+        color: $lightGray;
+        font-weight: 700;
+        transition: all 100ms linear;
+
+        &:checked {
+          background-color: $lightGray;
+          color: $white;
+        }
+
+        &:before {
+          content: attr(label);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+        }
+
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
   }
 }
 
@@ -63,6 +126,6 @@ ul {
   position: absolute;
   width: 100%;
   height: 10%;
-  background-color: hsl(213, 19%, 18%);
+  background-color: $darkBlue;
   bottom: 0;
 }

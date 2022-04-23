@@ -14,22 +14,46 @@ const Rating = () => {
         appreciated to help us improve our offering!
       </p>
       <div className="ratings">
-        <ul>
-          <li>
-            <a
-              href="#"
-              onClick={() => {
-                setSelected(1);
-              }}
-            >
-              1
-            </a>
-          </li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
+        <input
+          label="1"
+          type="radio"
+          name="radio"
+          onClick={() => {
+            setSelected(1);
+          }}
+        />
+        <input
+          label="2"
+          type="radio"
+          name="radio"
+          onClick={() => {
+            setSelected(2);
+          }}
+        />
+        <input
+          label="3"
+          type="radio"
+          name="radio"
+          onClick={() => {
+            setSelected(3);
+          }}
+        />
+        <input
+          label="4"
+          type="radio"
+          name="radio"
+          onClick={() => {
+            setSelected(4);
+          }}
+        />
+        <input
+          label="5"
+          type="radio"
+          name="radio"
+          onClick={() => {
+            setSelected(5);
+          }}
+        />
       </div>
       <Link to="/thankyou" state={{ selected }}>
         <button>Submit</button>
