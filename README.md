@@ -4,7 +4,7 @@ Interactive rating component using HTML, SCSS, React.
 
 # Live URL
 
-http://nvstudio.si/rating-component/
+https://nvstudio.si/rating-component/
 
 # How it works
 
