@@ -92,6 +92,7 @@ body {
       &:disabled {
         background-color: $mediumGray;
         color: $darkBlue;
+        cursor: default;
       }
     }
 
