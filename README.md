@@ -18,6 +18,7 @@ State persists between going back and forth between pages, resets upon refresh.
 - passing props through Router's Link
 - using useLocation hook for rendering passed props in Link
 - basics of GIT (commit, push, setting up SSL key) and Github
+- using build to deploy the project to a web server
 
 # Considerations
 

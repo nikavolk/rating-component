@@ -90,7 +90,9 @@ body {
       display: flex;
       justify-content: space-between;
       margin: 20px 0;
+
       input {
+        margin: 0;
         appearance: none;
         cursor: pointer;
         border-radius: 50%;

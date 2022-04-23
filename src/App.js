@@ -1,11 +1,11 @@
 import "./index.scss";
 import Rating from "./Components/Rating";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import ThankYou from "./Components/ThankYou";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="main-container">
         <div className="card">
           <Routes>
@@ -15,7 +15,7 @@ function App() {
         </div>
       </div>
       <div className="footer"></div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
