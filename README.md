@@ -2,6 +2,10 @@
 
 Interactive rating component using HTML, SCSS, React.
 
+# Live URL
+
+http://nvstudio.si/rating-component/
+
 # How it works
 
 User chooses a rating from 1 to 5. Upon clicking on the submit button,
